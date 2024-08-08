@@ -1,0 +1,28 @@
+<ion-header [translucent]="true">
+  <ion-toolbar class="header-custom-background" Color="secondary">
+    <ion-title class="titulo-centrado">HISTORIAL</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-card *ngIf="user">
+    <ion-card-title>
+      {{ user.Cargo }}
+    </ion-card-title>
+  </ion-card>
+  
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Notifinal</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-list>
+    <ion-item *ngFor="let incident of finishedIncidents">
+      <ion-button expand="block" (click)="viewIncident(incident)">
+        {{ incident.type }} - {{ incident.date }}
+      </ion-button>
+    </ion-item>
+  </ion-list>
+</ion-content>
+

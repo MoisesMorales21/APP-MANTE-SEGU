@@ -1,0 +1,38 @@
+<ion-menu contentId="menu-content" menuId="menu-content" side="start" type="overlay">
+  <ion-header>
+    <app-header title="Menú"></app-header>
+  </ion-header>
+
+  <ion-content>
+    <ion-menu-toggle auto-hide="false" *ngFor="let p of pages">
+      <ion-item [ngClass]="{'active': currentPath === p.url}" (click)="navigateTo(p.url)" routerDirection="root" detail>
+        <ion-label>{{p.title}}</ion-label>
+      </ion-item>
+    </ion-menu-toggle>
+
+    <ion-header [translucent]="true"></ion-header>
+
+    <ion-content>
+      <ion-card *ngIf="user">
+          <div class="user-icon">
+            <ion-icon name="person-circle-outline"></ion-icon>
+          </div>
+            <ion-card-title>
+            {{ user.Cargo }}
+          </ion-card-title>
+        <ion-card-content>
+          <p><strong>Nombre:</strong> {{ user.name }}</p>
+          <p><strong>Correo:</strong> {{ user.email }}</p>
+          <ion-button expand="full" (click)="navigateToEditProfile()" >Editar Perfil</ion-button>
+        </ion-card-content>
+      </ion-card>
+
+      <ion-button (click)="signOut()" lines="none">
+        <ion-label>Cerrar Sesión</ion-label>
+      </ion-button>
+
+    </ion-content>
+  </ion-content>
+</ion-menu>
+
+<ion-router-outlet id="menu-content" main></ion-router-outlet>

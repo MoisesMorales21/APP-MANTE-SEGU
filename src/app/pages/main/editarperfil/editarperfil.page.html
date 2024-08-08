@@ -1,0 +1,23 @@
+<ion-header [translucent]="true">
+  <ion-toolbar class="header-custom-background" Color="secondary">
+    <ion-title class="titulo-centrado">EDITAR PERFIL</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-card *ngIf="user">
+    <ion-card-header>
+      <ion-card-title>ESTUDIANTE:</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-item>
+        <ion-label position="floating">Nombre</ion-label>
+        <ion-input [(ngModel)]="user.name"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Correo Electrónico</ion-label>
+        <ion-input [(ngModel)]="user.email"></ion-input>
+      </ion-item>
+      <ion-button expand="full" (click)="updateUser()">Guardar Cambios</ion-button>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

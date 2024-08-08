@@ -1,0 +1,121 @@
+// Variables de colores y fuentes
+$primary-color: #3880ff;
+$secondary-color: #0cd1e8;
+$background-color: #f4f5f8;
+$text-color: #222428;
+$font-family: 'Arial', sans-serif;
+
+ion-header {
+  &.header-custom-background {
+    background: $secondary-color;
+  }
+
+  ion-toolbar {
+    color: white;
+    .titulo-centrado {
+      text-align: center;
+      font-family: $font-family;
+      font-size: 1.5em;
+    }
+  }
+}
+
+ion-content {
+  background-color: $background-color;
+
+  ion-header {
+    ion-toolbar {
+      background: $primary-color;
+      color: white;
+      ion-title {
+        font-family: $font-family;
+        font-size: 2em;
+        text-align: center;
+      }
+    }
+  }
+
+  ion-list {
+    margin: 20px;
+    padding: 0;
+    list-style: none;
+
+    ion-item {
+      margin-bottom: 10px;
+
+      ion-button {
+        width: 100%;
+        background: $primary-color;
+        color: white;
+        text-align: center;
+        font-family: $font-family;
+        font-size: 1em;
+        padding: 10px 0;
+
+        &:hover {
+          background: darken($primary-color, 10%);
+        }
+
+        &:active {
+          background: lighten($primary-color, 10%);
+        }
+      }
+    }
+  }
+  ion-card-title {
+    background-color: $background-color;
+    color: $text-color;
+    padding: 16px; // Espaciado interno
+    margin: 0; // Eliminar márgenes por defecto
+    border-radius: 8px; // Bordes redondeados
+    //box-shadow: 0 4px 8px $shadow-color; // Sombra para profundidad
+    font-size: 1.5rem; // Tamaño de la fuente
+    font-weight: bold; // Negrita para el título
+    text-align: center; // Centrar el texto
+    text-transform: uppercase; // Texto en mayúsculas
+
+  }
+  /* User Information Card */
+  ion-card {
+    border-radius: 12px;
+    //box-shadow: 0 4px 8px $shadow-color;
+    margin-top: 2rem;
+   // background-color: $card-background;
+
+    ion-card-header {
+      background-color: $secondary-color;
+      color: white;
+      text-align: center;
+      font-size: 1.2rem;
+      padding: 1rem 0;
+      border-top-left-radius: 12px;
+      border-top-right-radius: 12px;
+    }
+
+    ion-card-content {
+      padding: 1.5rem;
+
+      p {
+        font-size: 1rem;
+        margin: 0.5rem 0;
+
+        strong {
+          font-weight: bold;
+        }
+      }
+
+      ion-button {
+        --background: #05356b; /* Red background for the logout button */
+        --color: #fff; /* White text color for the logout button */
+        --border-radius: 4px; /* Rounded corners for the button */
+        margin-top: 16px; /* Margin above the button */
+        display: flex;
+        align-items: center;
+    
+        ion-icon {
+          margin-right: 8px; /* Space between the icon and text */
+        }
+      }
+    }
+  }
+}

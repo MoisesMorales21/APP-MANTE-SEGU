@@ -1,0 +1,86 @@
+// Variables de colores y fuentes
+$primary-color: #3880ff;
+$secondary-color: #0cd1e8;
+$background-color: #f4f5f8;
+$text-color: #222428;
+$font-family: 'Arial', sans-serif;
+
+ion-header {
+  &.header-custom-background {
+    background: $secondary-color;
+  }
+
+  ion-toolbar {
+    color: white;
+    .titulo-centrado {
+      text-align: center;
+      font-family: $font-family;
+      font-size: 1.5em;
+    }
+  }
+}
+
+ion-content {
+  background-color: $background-color;
+  padding: 16px;
+
+  ion-header {
+    ion-toolbar {
+      background: $primary-color;
+      color: white;
+      ion-title {
+        font-family: $font-family;
+        font-size: 2em;
+        text-align: center;
+      }
+    }
+  }
+
+  div {
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+
+    h2 {
+      font-family: $font-family;
+      font-size: 1.5em;
+      color: $text-color;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-family: $font-family;
+      font-size: 1em;
+      color: $text-color;
+      margin-bottom: 10px;
+    }
+
+    ion-button {
+      display: block;
+      margin-top: 20px;
+      width: 100%;
+      background: $secondary-color;
+      color: white;
+      font-family: $font-family;
+      text-align: center;
+
+      &:hover {
+        background: darken($secondary-color, 10%);
+      }
+
+      &:active {
+        background: lighten($secondary-color, 10%);
+      }
+    }
+  }
+
+  .loading {
+    font-family: $font-family;
+    font-size: 1em;
+    color: $text-color;
+    text-align: center;
+    margin-top: 50px;
+  }
+}

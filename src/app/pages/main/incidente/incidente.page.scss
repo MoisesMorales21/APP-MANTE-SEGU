@@ -1,0 +1,100 @@
+// styles.scss
+
+// Variables
+$primary-color: #3880ff;
+$secondary-color: #3dc2ff;
+$background-color: #f4f5f8;
+$header-background-color: #0044cc;
+$text-color: #333;
+$button-background-color: $primary-color;
+$button-text-color: #fff;
+
+// General styles
+body {
+  background-color: $background-color;
+  color: $text-color;
+}
+
+// Header styles
+.header-toolbar {
+  background-color: $header-background-color;
+  color: white;
+
+  ion-title {
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+}
+
+// Content styles
+ion-content {
+  padding: 1rem;
+}
+
+.incident-details {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  margin-top: 1rem;
+
+  h2.incident-type {
+    color: $primary-color;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
+
+  p {
+    font-size: 1rem;
+    margin: 0.5rem 0;
+
+    strong {
+      font-weight: bold;
+    }
+  }
+}
+
+// Button styles
+.buttons-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+
+  ion-button {
+    background-color: $button-background-color;
+    color: $button-text-color;
+    font-weight: bold;
+    border-radius: 4px;
+    margin: 0 0.5rem;
+
+    &:first-of-type {
+      margin-left: 0;
+    }
+
+    &:last-of-type {
+      margin-right: 0;
+    }
+
+    &:hover {
+      background-color: darken($button-background-color, 10%);
+    }
+  }
+}
+
+// Image styles
+.image-container {
+  display: flex;
+  justify-content: center;
+  margin: 15px 0;
+}
+
+.large-image {
+  width: 100%;
+  height: auto;
+  max-width: 400px;
+  border-radius: 8px;
+  margin: 0 auto;
+  display: block;
+}

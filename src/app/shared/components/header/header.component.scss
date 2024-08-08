@@ -1,0 +1,45 @@
+// Variables de colores para un fácil mantenimiento
+$color-secondary: #3880ff;  // Cambia esto al color que desees
+$color-background: #f8f8f8; // Fondo neutro claro
+$color-text: #000;          // Color de texto principal
+$color-subtext: white;       // Color de subtexto (texto secundario)
+
+// Estilos generales
+body {
+  font-family: Arial, sans-serif; // Fuente general
+  background-color: $color-background;
+  color: $color-text;
+  margin: 0;
+  padding: 0;
+}
+
+ion-header {
+  .ion-no-border {
+    border-bottom: none; // Eliminar el borde inferior del encabezado
+  }
+
+  ion-toolbar {
+    background-color: $color-secondary;
+    color: #fff; // Texto blanco para contraste en la barra de herramientas
+
+
+
+    ion-title {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      strong {
+        font-size: 1.2rem; // Tamaño de fuente para el título principal
+        text-align: center;
+      }
+
+      .admin {
+        font-size: 20px; // Tamaño de fuente para el subtítulo
+        color: $color-subtext; // Color del subtítulo
+        text-align: center;
+      }
+    }
+  }
+}

@@ -1,0 +1,5 @@
+-----Paso 1-------
+1. Descargar los dos archivos.
+2. El "APP-MANTE-SEGU" es la aplicación 1 para la Administración.
+3. El "APP-USUARIOS-main" es la aplicación 2 para el cliente.
+4. Después de descargar, clonar las dos carpetas.

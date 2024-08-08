@@ -1,0 +1,40 @@
+<ion-header [translucent]="true">
+  <ion-toolbar class="header-custom-background" color="secondary">
+    <ion-title class="titulo-centrado">DETALLE DEL INCIDENTE</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Detalle del Incidente</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-card *ngIf="incident">
+    <ion-card-header>
+      <ion-card-title>Incidente {{ incident.uid }}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p><strong>Estado:</strong> {{ incident.status }}</p>
+      <p><strong>Cargo:</strong> {{ incident.type }}</p>
+      <p><strong>Descripción:</strong> {{ incident.description }}</p>
+      <p><strong>Zona:</strong> {{ incident.place }}</p>
+      <p><strong>Piso:</strong> {{ incident.floor }}</p>
+      <p><strong>Fecha:</strong> {{ incident.timestamp }}</p>
+      <p><strong>Foto:</strong></p>
+
+      <!-- Mostrar la imagen si hay URL disponible -->
+      <div *ngIf="incident.photo" class="image-container">
+        <img [src]="incident.photo" alt="Imagen del Incidente" class="large-image">
+      </div>
+
+      <!-- Botones para marcar el estado del incidente -->
+      <div class="buttons-container">
+        <ion-button color="primary" (click)="markAsRead()">En Atención</ion-button>
+        <ion-button color="primary" (click)="markAsFinished()">Finalizado</ion-button>
+      </div>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
+

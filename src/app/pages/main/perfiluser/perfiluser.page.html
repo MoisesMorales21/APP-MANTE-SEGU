@@ -1,0 +1,18 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>perfiluser</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card *ngIf="user">
+    <ion-card-header>
+      <ion-card-title>{{ user.email }}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p><strong>Carrera:</strong> {{ user.career }}</p>
+      <p><strong>Ciclo:</strong> {{ user.cicle }}</p>
+      <p><strong>Código:</strong> {{ user.code }}</p>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

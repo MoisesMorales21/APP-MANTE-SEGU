@@ -1,0 +1,46 @@
+// General styles
+.d-flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+  
+  .login-form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    border-radius: 10px;
+  }
+  
+  app-custom-input {
+    margin-bottom: 15px;
+  }
+  
+  // Link styles
+  .ion-text-end {
+    display: block;
+    margin-top: 1px;
+    text-align: end;
+    color: #261f91;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+  
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  
+  // Button styles
+  ion-button.submit {
+    margin-top: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  

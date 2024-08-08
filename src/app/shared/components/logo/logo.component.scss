@@ -1,0 +1,17 @@
+.shield-icon {
+    max-width: 100px; 
+    margin-top: 20px; 
+    display: block;
+    margin: 0 auto;
+}
+
+@media screen and (max-width: 768px) {
+    .shield-icon {
+        max-width: 350px; /* Se reduce aún más el tamaño para dispositivos móviles */
+        margin-top: 10px; /* Se ajusta el margen superior */
+    }
+}
+
+h1{
+    margin-top: 0;
+}
